@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TrackMyWalks.Views.WalksMainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddWalk_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="WalkEntriesListView" RowHeight="80" HasUnevenRows="true" SeparatorColor="#ddd" ItemTapped="myWalkEntries_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnEditItem" CommandParameter="{Binding .}" Text="Edit" IsDestructive="False" />
+                                <MenuItem Clicked="OnDeleteItem" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout x:Name="cellLayout" Padding="10,5,10,5" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image Aspect="AspectFit" Source="{Binding ImageUrl}"  VerticalOptions="FillAndExpand" />
+                                <StackLayout x:Name="DetailsLayout" Padding="10,0,0,0" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" TextColor="Black" />
+                                    <Label Text="{Binding Description}" FontAttributes="None" FontSize="12" TextColor="Blue" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
