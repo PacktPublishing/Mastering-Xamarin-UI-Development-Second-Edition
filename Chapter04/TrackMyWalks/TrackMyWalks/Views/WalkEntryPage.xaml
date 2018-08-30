@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TrackMyWalks.Views.WalkEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="SaveWalkItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableView.Root>
+                <TableSection Title="Enter Walk Trail Information">
+                    <EntryCell Label="Title:" Placeholder="Provide a Title for this trail" />
+                    <EntryCell Label="Description:" Placeholder="Provide trail description" />
+                    <EntryCell Label="Latitude:" Placeholder="Provide latitude coordinates" Keyboard="Numeric" />
+                    <EntryCell Label="Longitude:" Placeholder="Provide longitude coordinates" Keyboard="Numeric" />
+                    <EntryCell Label="Distance:" Placeholder="Provide trail distance" Keyboard="Numeric" />
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="15,0">
+                            <Label Text="Trail Difficulty Level:" VerticalOptions="Center" />
+                            <Picker Title="Choose Difficulty" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Easy</x:String>
+                                        <x:String>Medium</x:String>
+                                        <x:String>Hard</x:String>
+                                        <x:String>Extreme</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
+                    <EntryCell Label="Image URL:" Placeholder="Provide an Image URL" />
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

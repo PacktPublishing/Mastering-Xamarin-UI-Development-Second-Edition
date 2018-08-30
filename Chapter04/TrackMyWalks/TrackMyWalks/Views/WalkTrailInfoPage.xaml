@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TrackMyWalks.Views.WalkTrailInfoPage">
+    <ContentPage.Content>
+        <ScrollView Padding="10">
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <Image x:Name="TrailImage" Aspect="AspectFill" Source="{Binding ImageUrl}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                <Label x:Name="TrailName" FontSize="28" FontAttributes="Bold" TextColor="Black" Text="{Binding Title}" />
+                <Label x:Name="TrailKilometers" FontSize="12" TextColor="Black" Text="{Binding Distance, StringFormat='Kilometers: {0} km'}" />
+                <Label x:Name="TrailDifficulty" FontSize="12" TextColor="Black" Text="{Binding Difficulty, StringFormat='Difficulty: {0}'}" />
+                <Label x:Name="TrailFullDescription" FontSize="11" TextColor="Black" Text="{Binding Description}" HorizontalOptions="FillAndExpand" />
+                <Button x:Name="BeginTrailWalk" Text="Begin this Trail" TextColor="White" BackgroundColor="#008080" Clicked="BeginTrailWalk_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
