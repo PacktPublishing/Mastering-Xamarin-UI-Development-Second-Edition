@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlanetaryApp" x:Class="PlanetaryApp.MainPage">
+    <ListView x:Name="planetsListView" RowHeight="80" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" TextColor="Black" Detail="{Binding Distance}" DetailColor="Red" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
