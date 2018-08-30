@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:valueConverters="clr-namespace:TrackMyWalks.ValueConverters" x:Class="TrackMyWalks.Views.WalkEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="SaveWalkItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <valueConverters:ImageConverter x:Key="imageConverter" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <Style TargetType="Picker">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="{DynamicResource CaptionStyle}" />
+                <Setter Property="BackgroundColor" Value="LightGoldenrodYellow" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsRunning="true" x:Name="progressIndicator" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsProcessBusy}" />
+            <Label Text="Saving Walk Information..." FontAttributes="Bold" TextColor="MediumVioletRed" HorizontalTextAlignment="Center" IsVisible="{Binding IsProcessBusy}" x:Name="SavingWalkInfo">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, WinPhone" Value="12" />
+                        <On Platform="iOS" Value="14" />
+                    </OnPlatform>
+                </Label.FontSize>
+            </Label>
+            <TableView Intent="Form" x:Name="WalkDetails">
+                <TableView.Root>
+                    <TableSection Title="Enter Walk Trail Information">
+                        <EntryCell Label="Title:" Text="{Binding Title, Mode=TwoWay}" Placeholder="Provide a Title for this trail" />
+                        <EntryCell Label="Description:" Text="{Binding Description, Mode=TwoWay}" Placeholder="Provide trail description" />
+                        <EntryCell Label="Latitude:" Text="{Binding Latitude, Mode=TwoWay}" Placeholder="Provide latitude coordinates" Keyboard="Numeric" />
+                        <EntryCell Label="Longitude:" Text="{Binding Longitude, Mode=TwoWay}" Placeholder="Provide longitude coordinates" Keyboard="Numeric" />
+                        <EntryCell Label="Distance:" Text="{Binding Distance, Mode=TwoWay}" Placeholder="Provide trail distance" Keyboard="Numeric" />
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" x:Name="WalkViewCell">
+                                <StackLayout.Margin>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <On Platform="Android, WinPhone" Value="15,0" />
+                                        <On Platform="iOS" Value="15,0" />
+                                    </OnPlatform>
+                                </StackLayout.Margin>
+                                <Label Text="Difficulty:" VerticalOptions="Center" />
+                                <Image Aspect="AspectFill" x:Name="DifficultyLevel" HeightRequest="50" WidthRequest="50" HorizontalOptions="Start" Source="{Binding Difficulty, Converter={StaticResource imageConverter}}" />
+                                <Picker Title="Choose Difficulty" SelectedItem="{Binding Difficulty, Mode=TwoWay}">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Easy</x:String>
+                                            <x:String>Medium</x:String>
+                                            <x:String>Hard</x:String>
+                                            <x:String>Extreme</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                        <EntryCell Label="Image URL:" Text="{Binding ImageUrl, Mode=TwoWay}" Placeholder="Provide an Image URL" />
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
