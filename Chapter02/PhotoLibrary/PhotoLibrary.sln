@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoLibrary", "PhotoLibrary.csproj", "{E92AA24A-4ACE-4D56-BFD4-1D735F12A26F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E92AA24A-4ACE-4D56-BFD4-1D735F12A26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92AA24A-4ACE-4D56-BFD4-1D735F12A26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92AA24A-4ACE-4D56-BFD4-1D735F12A26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92AA24A-4ACE-4D56-BFD4-1D735F12A26F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
