@@ -10,11 +10,11 @@ This is the code repository for [Mastering Xamarin UI Development - Second Editi
 Build robust and a maintainable cross-platform mobile UI with Xamarin and C# 7This book will provide you with the knowledge and practical skills that are required to develop real-world Xamarin and Xamarin.Forms applications. You’ll learn how to create native Android app that will interact with the device camera and photo gallery, and then create a native iOS sliding tiles game. You will learn how to implement complex UI layouts and creating customizable control elements based on the platform, using XAML and C# 7 code to interact with control elements within your XAML ContentPages.
 
 This book covers the following exciting features:
-* Build native and cross-platform apps for both iOS and Android using the Xamarin and Xamarin.Forms platform using C# 7.
-* Implement and customize different user-interface layouts and Animations within your application and use the PlatFormEffects API to change appearance of control elements.
-* Understand the MVVM architectural pattern and how to implement this with your apps.
-* Build a NavigationService class to enable. navigation between your ViewModels as well as Implementing Data-Binding to control elements within your XAML pages and ViewModels.
-* Work with the Razor Templating Engine to create Models and Razor Pages that communicate with an SQLite database.
+* Build native and cross-platform apps for both iOS and Android using the Xamarin and Xamarin.Forms platform using C# 7
+* Implement and customize different user-interface layouts and Animations within your application and use the PlatFormEffects API to change appearance of control elements
+* Understand the MVVM architectural pattern and how to implement this with your apps
+* Build a NavigationService class to enable. navigation between your ViewModels as well as Implementing Data-Binding to control elements within your XAML pages and ViewModels
+* Work with the Razor Templating Engine to create Models and Razor Pages that communicate with an SQLite database
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1788995511) today!
 
