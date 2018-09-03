@@ -40,7 +40,7 @@ With the following software and hardware list you can run all code files present
 
 ### Software and Hardware List
 
-| Chapter  | Software required                   | OS required                        |
+| Chapter  | Software required                   | Hardware required                        |
 | -------- | ------------------------------------| -----------------------------------|
 | 1-13        | Visual Studio Community 2017 - Version 7.5.4 (Build 3) Xcode 9.4.1                     | macOS Sierra 10.12, 1.8 GHz faster processor, 4 GB - 8GB of RAM, Approximately 1GB of hard disk space |
 
