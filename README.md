@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this product for only $5 on PacktPub.com](https://www.packtpub.com/)
------
-*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Mastering Xamarin UI Development - Second Edition
 
 <a href="https://www.packtpub.com/application-development/mastering-xamarin-ui-development-second-edition?utm_source=github&utm_medium=repository&utm_campaign=978-1-78899-551-1"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10225_0.png" alt="Mastering Xamarin UI Development - Second Edition" height="256px" align="right"></a>
